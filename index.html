@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expense Tracker</title>
+  <script src="script.js" defer></script>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.0/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 h-screen flex items-center justify-center">
+  <div class="bg-white p-8 rounded-lg shadow-lg max-w-md w-full">
+    <h2 class="text-2xl font-bold mb-6 text-center">Expense Tracker</h2>
+    
+    <div class="mb-4">
+      <label for="expenseDescription" class="block text-lg mb-2">Expense Description:</label>
+      <input type="text" id="expenseDescription" class="w-full p-2 border border-gray-300 rounded mb-2" placeholder="Enter expense description" />
+      
+      <label for="expenseAmount" class="block text-lg mb-2">Amount:</label>
+      <input type="number" id="expenseAmount" class="w-full p-2 border border-gray-300 rounded" placeholder="Enter amount" />
+    </div>
+    
+    <button id="addExpenseBtn" class="w-full bg-green-500 text-white p-2 rounded hover:bg-green-600">
+      Add Expense
+    </button>
+
+    <h3 class="text-xl font-semibold mt-6">Expenses:</h3>
+    <ul id="expenseList" class="mt-4 space-y-2"></ul>
+
+    <div class="mt-6 text-center">
+      <span class="font-semibold">Total: $<span id="totalAmount">0</span></span>
+    </div>
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+</html>
